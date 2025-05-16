@@ -1,0 +1,22 @@
+!
+no service pad
+service timestamps debug datetiem msec
+service timestamps log datetiem msec
+no service password-encryption
+hostname Switch
+no ip domain-lookup
+interface vlan1
+ no ip address
+  shutdown
+
+exit
+
+line con 0
+ logging synchronous
+line vty 0 4
+ login 
+
+transport input none
+
+!
+end
